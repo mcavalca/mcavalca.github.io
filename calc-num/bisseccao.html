@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>cavalca</title>
+  </head>
+  <body>
+    <h1>Método da Bissecção</h1>
+    <h5><a href='index.html'>&lt; Voltar</a></h5>
+    
+    <hr>
+    <p>
+    Seja a função f(x) contínua no interval [a, b] e tal que f(a) * f(b) &lt; 0.<br>
+    Vamos supor, para simplificar, que o intervalo (a, b) contenha uma única raiz da equação f(x) = 0.<br>
+    O objetivo deste método é reduzir a amplitude do intervalo que contém a raiz até se atingir a precisão requerida: (b - a) &lt; &epsilon;, usando para isto a sucessiva divisão de [a, b] ao meio.<br>
+    </p>
+    <hr>
+    
+    <h2>Código em C</h2>
+    <br>
+    <code>
+    <pre>
+    // Esta estrutuda de dados irá armazenar o valor de X e o numero de iteracoes
+    typedef struct resultado {
+        float valor;
+        int iteracoes;
+    } resultado;
+    
+    float Funcao (float x){
+        // Alterar a função abaixo
+        float y = x*x*x;
+        return y;
+    }
+    
+    float Bisseccao (float a, float b, float Erro){
+        resultado x;
+        x.iteracoes = 0;
+        do {
+        
+            // Checagem do sinal das variáveis
+            if (Funcao(b) &lt; 0){
+                float temp = a;
+                a = b;
+                b = temp;
+            }
+            
+            x.valor = (a + b) / 2;
+            x.iteracoes += 1;
+            
+            if (Funcao(x.valor) &gt; 0)
+                b = x;
+            else if (Funcao(x.valor) &lt; 0)
+                a = x;
+            else
+                return x;
+                
+        } while ((b - a) &gt; Erro);
+        return x;
+    }
+    </pre>
+    </code>
+    
+    <hr>    
+    <h2>Javascript</h2>
+    <br>
+    <p>
+    Em construção
+    </p>
+    
+  </body>
+</html>
