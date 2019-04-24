@@ -4,7 +4,11 @@
     
     <meta charset="UTF-8">
     <title>cavalca</title>
+    <link rel="icon" href="../images/icon.png">
     <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/default.css">
+    <script src="/path/to/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     
   </head>
   
@@ -24,6 +28,150 @@
     
     <div class="container">
       <h2>Interpolação Polinomial</h2>
+      <br>
+      <h4>Definição</h4>
+      <br>
+      <p>
+      Interpolar uma função f(x) consiste em aproximar essa função por uma outra função g(x), escolhida entre uma classe de funções definida <i>a priori</i> e que satisfaça algumas propriedades. A função g(x) é então usada em substituição à função f(x).<br><br>
+      
+      
+      Dado os pontos (x<sub>0</sub>, f(x<sub>0</sub>)), (x<sub>1</sub>, f(x<sub>1</sub>)),...,(x<sub>n</sub>, f(x<sub>n</sub>)), portanto (n+1) pontos, queremos aproximar f(x) por um polinômio p<sub>n</sub>(x), de grau menor ou igual a n, tal que:<br>
+        
+      f(x<sub>k</sub>) = p<sub>n</sub>(x<sub>k</sub>)<br>k = 0, 1, 2,..., n<br>
+      </p>
+      <hr>
+
+      <h4>Código em C</h4>
+      <br>
+      <pre><code>
+      // Código
+      </code></pre>
+
+      <hr>    
+      <h4>Javascript</h4>
+      <br>
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>0</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x0">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>1</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x1">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>2</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x2">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>3</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x3">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>4</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x4">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>5</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x5">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>6</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x6">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>7</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x7">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 10px">
+              <p>x<sup>8</sup></p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="x8">
+          </div>
+        </div>
+      </form>
+      <br>
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>0</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx0">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>1</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx1">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>2</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx2">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>3</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx3">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>4</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx4">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>5</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx5">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>6</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx6">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>7</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx7">
+          </div>
+          <div class="col">
+            <div class="mx-auto" style="width: 30px">
+              <p>F(x<sup>8</sup>)</p>
+            </div>
+            <input type="number" class="form-control" placeholder="0" id="fx8">
+          </div>
+        </div>
+      </form>
+      <br>
+      <button class="btn btn-primary" type="submit">Gerar</button>
+      <br>
+      <br>
+      
     </div>
   </body>
 </html>

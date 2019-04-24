@@ -60,7 +60,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #eee;
 }
 
 [tabindex="-1"]:focus {
@@ -189,6 +189,8 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
+  background-color: #444;
+  border-radius: 10px;
 }
 
 figure {
@@ -531,7 +533,8 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #212529;
+  color: #eee;
+  font-family: Consolas, Courier, monospace;
 }
 
 pre code {
@@ -4809,6 +4812,7 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #e9ecef;
   border-radius: 0.25rem;
+  background-color: #ddd;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -10036,3 +10040,5 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/* Custom */
