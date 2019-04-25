@@ -189,7 +189,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  background-color: #444;
+  background-color: #272727;
   border-radius: 10px;
 }
 
@@ -508,7 +508,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #e83e8c;
+  color: #33FF00;
   word-break: break-word;
 }
 
@@ -533,7 +533,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #eee;
+  color: #33FF00;
   font-family: Consolas, Courier, monospace;
 }
 

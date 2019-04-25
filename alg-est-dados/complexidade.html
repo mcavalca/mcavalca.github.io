@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Complexidade</title>
+    <link rel="icon" href="../images/icon.png">
+    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/default.css">
+    <script src="/path/to/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Algoritmo e Estrutura de Dados</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Complexidade</li>
+        </ol>
+      </nav>
+      
+      <hr>
+    </div>
+    
+    <div class="container">
+      <h2>Complexidade</h2>
+      <br>
+      <h4>Introdução</h4>
+      <br>
+      <p>
+        A análise de algoritmos trata do estudo da eficiência e custo dos algoritmos, independente de sua funcionalidade e resultados, desde que este esteja correto; isto é de suma importância pois será através deste estudo em que se encontrará qual algoritmo melhor serve a necessidade do usuário. Vale notar que, em certas ocasiões, o melhor algoritmo não será aquele que executa a tarefa mais rapidamente mas sim aquele que exige menos recursos, sejam estes de software ou hardware.
+        <br><br>
+        Existem 2 tipos de complexidade de algoritmos que podemos medir: espacial e temporal. O primeiro a quantidade de memória que ele necessita, e a segunda descreve o tempo que dado algoritmo leva para encontrar a resposta - esta por sua vez considerada instável pois leva-se em conta a máquina em que foi executado.
+        <br>
+        Para se encontrar a complexidade devemos analisar o número total de operações realizadas pelo dado algoritmo, tais como comparações ou operações aritméticas, e expressá-la como f(n). Os dados de entrada do algoritmo também são importantes para o cálculo, e assim surgem 3 diferentes situações: <b>melhor caso</b>, <b>caso médio</b> (mais complexo) e <b>pior caso</b>. 
+        <br><br>
+        Como exemplo, vamos considerar um algoritmo de ordenação.
+        <br>
+        O melhor caso será aquele em que os dados de entrada já estão ordenados, logo o algoritmo irá executar o mais rápido possível. O pior caso será aquele em que os dados de entrada estão ordenados, porém reversamente, fazendo com que o algoritmo leve o tempo máximo possível para encontrar a solução. O caso médio, apesar de mais complexo, oferece uma maior estabilidade no real valor da complexidade através de um cálculo da média sobre todas as entradas possíveis do algoritmo. Esta estabilidade se dá ao fato de que o melhor e pior caso, na prática, são dificilmente encontrados.
+        <br><br>
+      </p>
+      <h4>Exemplo</h4>
+      <br>
+      <pre><code>
+      ...
+      for (int a = 1; a <= n; a++){         // Executa n vezes  //
+          printf("Tabuada do %d:\n");       // ................ //
+          for (int b = 1; b <= 10; b++){    // Executa 10 vezes //
+            printf("%d...", a * b);         // ................ //
+          }                                 // ................ //
+          printf("\n\n");                   // ................ //
+      }
+      ...
+      </code></pre>
+      <br>
+      <p>
+        Consideremos o código acima que realiza o cálculo da tabuada de 1 até n, sendo n um valor de entrada qualquer.
+        <br>
+        Neste caso, as operações relevantes serão aquelas nas linhas 2 e 5, onde existem os laços. As demais operações podemos considerar como de tamanho 1. Logo: f(n) = n * (1 + 1 + 10 * (1)) = 12 * n.
+        <br>
+        Como o cálculo da complexidade acaba se tornando algo muito trabalhoso para cada algoritmo, considera-se que a quantidade dos dados de entrada tende ao infinito, e, com isso, as constantes pouco interferem no resultado final. Assim temos o que chamamos de Análise Assintótica.
+      </p>
+      <br>
+      <hr>
+      <br>
+      <h4>Análise Assintótica</h4>
+      <br>
+      <p>
+        Trata da análise da complexidade levando em consideração que a quantidade dos dados de entrada cresce de modo indefinido, ignorando os elementos de menor grandeza. Esta análise é importante para escolha de um algoritmo para solução de problemas demasiadamente grandes. Define-se que uma função f(n) domina <b>assintoticamente</b> outra função g(n) se existem duas constantes positivas c e m tais que, para n &ge; m, temos g(n) &le; c * f(n).
+        <br><br>
+      </p>
+      <h4>Notação <i>Big O</i></h4>
+      <br>
+      <p>
+        Serve para denotar a complexidade assintótica de um dado algoritmo; seja f uma função de complexidade de um dado algoritmo, afirma-se que <i>O</i>(f) é sua complexidade assintótica -  Com isso podemos comparar diversas funções de complexidade e encontrar o melhor algoritmo para a solução do problema.
+        <br>
+        Grande parte dos algoritmos possuem um parâmetro que afeta significativamente o seu tempo de execução, estes listados abaixo:
+      </p>
+      <br>
+      <br>
+      
+    </div>
+  </body>
+</html>
