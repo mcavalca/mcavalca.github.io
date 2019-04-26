@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Selection Sort</title>
+    <link rel="icon" href="../images/icon.png">
+    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Algoritmo e Estrutura de Dados</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Selection Sort</li>
+        </ol>
+      </nav>
+      
+      <hr>
+    </div>
+    
+    <div class="container">
+      <h2>Selection Sort</h2>
+      <br>
+      <h4>Definição</h4>
+      <br>
+      <p>
+        A idéia deste algoritmo de ordenação é <b>selecionar o menor elemento</b> da lista de entrada (vetor) e o <b>trocar com o elemento que está no início</b> do vetor. Isto é feito com a ajuda de um marcador que irá dividir o vetor em 2 partes - ordenada, à sua esquerda, e desordenada, à sua direita. O algoritmo então irá procurar pelo menor elemento no sub-vetor desordenado e trocar com o elemento no início deste mesmo sub-vetor. Após a verificação no último elemento deste sub-vetor, o marcador irá avançar para o próximo elemento. Este processo se repete até que o marcador tenha percorrido todo o vetor. Ao longo da execução afirma-se que os elementos do sub-vetor à esquerda já estão ordenados de forma correta.
+        <br>
+        A complexidade deste algoritmo é de <i>O</i>(n<sup>2</sup>) para todos os casos.
+        <br><br>
+      </p>
+      <h4>Códico em C</h4>
+      <br>
+      <pre><code>
+        void SelectionSort(int *vetor, int tamanho) {
+        
+            int i, j, iMenor, troca;
+            for (i = 0; i < (n - 1); i++) {
+                iMenor = i;
+                for (j = (i + 1); j < n; j++) {
+                    if (vetor[j] < vetor[iMenor]) {
+                        iMenor = j;
+                    }
+                }
+            }
+            
+            troca = vetor[iMenor];
+            vetor[iMenor] = vetor[i];
+            vetor[i] = troca;
+        }
+      </code></pre>
+      <br>
+      <h4>Selection Sort em Execução</h4>
+      <br>
+      <div class="clearfix">
+        <button class="btn btn-primary" onclick="gerarVetor()">Gerar Vetor</button>
+        <button class="btn btn-primary" onclick="selectionSort()">Ordenar</button>
+        <button class="btn btn-danger float-right" onclick="limparVetor()">Limpar</button>
+      </div>
+      <br>
+      <ul class="list-group list-group-horizontal-xl">
+        <li class="list-group-item flex-fill" align="center" id="v0">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v1">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v2">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v3">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v4">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v5">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v6">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v7">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v8">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v9">-</li>
+      </ul>
+      <br>
+      <br>
+      
+    </div>
+    
+    <script type="text/javascript" src="js/ordenacoes.js"></script>
+    <!--
+    <div class="container fixed-bottom bg-light">
+      <p>teste</p>
+    </div>
+    -->
+  </body>
+</html>

@@ -49,10 +49,6 @@
         }
       </code></pre>
       <br>
-      <p>
-        Texto
-      </p>
-      <br>
       <h4>Bubble Sort em Execução</h4>
       <br>
       <div class="clearfix">
@@ -74,11 +70,69 @@
         <li class="list-group-item flex-fill" align="center" id="v9">-</li>
       </ul>
       <br>
+      <p>
+        Este algoritmo é extremamente simples, e não checa se o vetor já está ordenado antes de realizar as trocas. Para isso basta adicionar uma condição que irá verificar, após cada iteração, se o vetor já está ordenado ou não.
+      </p>
+      <hr>
+      <br>
+      <h4>Bubble Sort "Inteligente"</h4>
+      <br>
+      <p>
+        Este algoritmo possui a mesma essência do anterior, porém com uma condição que irá verificar se o vetor já está ordenado após cada iteração. Segue abaixo o algoritmo em C com esta nova função.
+        <br><br>
+      </p>
+      <h4>Códico em C</h4>
+      <br>
+      <pre><code>
+        void BubbleSortSmart(int *vetor, int tamanho){
+            int i, j, troca;
+            for (i = 0; i < tamanho; i++){
+            
+                // Esta variável irá dizer se houve troca ou não...
+                int houveTroca = 0; 
+                // A troca só é realizada se o vetor estiver ordenado
+                
+                for (j = 0; j < (tamanho - i); j++){
+                    if (*vetor[j] > *vetor[j + 1]){
+                        troca = *vetor[j];
+                        *vetor[j] = *vetor[j + 1];
+                        *vetor[j + 1] = troca;
+                        houveTroca = 1;
+                    }
+                }
+                
+                // ... caso não houve troca, é porque o vetor já está ordenado
+                if (!houveTroca) break;
+            }
+        }
+      </code></pre>
+      <br>
+      <h4>Bubble Sort "Inteligente" em Javascript</h4>
+      <br>
+      <div class="clearfix">
+        <button class="btn btn-primary" onclick="gerarVetor2()">Gerar Vetor</button>
+        <button class="btn btn-primary" onclick="bubbleSortSmart()">Ordenar</button>
+        <button class="btn btn-danger float-right" onclick="limparVetor2()">Limpar</button>
+      </div>
+      <br>
+      <ul class="list-group list-group-horizontal-xl">
+        <li class="list-group-item flex-fill" align="center" id="y0">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y1">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y2">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y3">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y4">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y5">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y6">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y7">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y8">-</li>
+        <li class="list-group-item flex-fill" align="center" id="y9">-</li>
+      </ul>
+      <br>
       <br>
       
     </div>
     
-    <script type="text/javascript" src="js/bubble-sort.js"></script>
+    <script type="text/javascript" src="js/ordenacoes.js"></script>
     <!--
     <div class="container fixed-bottom bg-light">
       <p>teste</p>
