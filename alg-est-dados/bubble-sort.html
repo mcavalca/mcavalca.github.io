@@ -28,7 +28,7 @@
       <br>
       <h4>Definição</h4>
       <br>
-      <p>
+      <p class="text-justify">
         Considerado um dos mais simples, é um método para ordenação de dados, normalmente listas e vetores. O algoritmo irá percorrer os dados de entrada de modo sequencial - 1 até (n - 1) - e, em cada um, realizará uma comparação com o próximo elemento, realizando uma troca caso haja necessidade. Para uma ordenação em ordem crescente, a troca é realizada se o menor valor suceder o elemento atual, e vice-versa para uma ordenação decrescente. A complexidade deste algoritmo é de ordem quadrática, ou seja, no <b>pior</b> e <b>médio</b> caso possui uma complexidade de O(n<sup>2</sup>).
         <br><br>
       </p>
@@ -70,14 +70,14 @@
         <li class="list-group-item flex-fill" align="center" id="v9">-</li>
       </ul>
       <br>
-      <p>
+      <p class="text-justify">
         Este algoritmo é extremamente simples, e não checa se o vetor já está ordenado antes de realizar as trocas. Para isso basta adicionar uma condição que irá verificar, após cada iteração, se o vetor já está ordenado ou não.
       </p>
       <hr>
       <br>
       <h4>Bubble Sort "Inteligente"</h4>
       <br>
-      <p>
+      <p class="text-justify">
         Este algoritmo possui a mesma essência do anterior, porém com uma condição que irá verificar se o vetor já está ordenado após cada iteração. Segue abaixo o algoritmo em C com esta nova função.
         <br><br>
       </p>
@@ -90,7 +90,7 @@
             
                 // Esta variável irá dizer se houve troca ou não...
                 int houveTroca = 0; 
-                // A troca só é realizada se o vetor estiver ordenado
+                // A troca só é realizada se o vetor não estiver ordenado
                 
                 for (j = 0; j < (tamanho - i); j++){
                     if (*vetor[j] > *vetor[j + 1]){

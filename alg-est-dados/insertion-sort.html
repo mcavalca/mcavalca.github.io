@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Insertion Sort</title>
+    <link rel="icon" href="../images/icon.png">
+    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Algoritmo e Estrutura de Dados</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Insertion Sort</li>
+        </ol>
+      </nav>
+      
+      <hr>
+    </div>
+    
+    <div class="container">
+      <h2>Insertion Sort</h2>
+      <br>
+      <h4>Definição</h4>
+      <br>
+      <p>
+        Este algoritmo de ordenação utiliza do mesmo princípio do <a href="selection-sort.html" class="text-primary">Selection Sort</a>: através de uma lista de entrada utiliza um marcador que parte do início do vetor para dividí-lo e <b>insere o elemento marcado</b> na sua posição correta do sub-vetor à esquerda, ajustando a posição de todos os outros elementos, e então avança o marcador, até que tenha percorrido todo o vetor. Do mesmo modo que o Selection Sort funciona, este algoritmo de ordenação irá gerar 2 sub-vetores à partir do marcador: o sub-vetor à esquerda contêm a parte já ordenada temporariamente, e à direita a parte não ordenada.
+        <br><br>
+        Podemos comparar este método de ordenação ao modo como podemos ordenar um conjunto de cartas: digamos que o jogador já tenha um grupo de cartas já ordenado em sua mão. Ao receber uma nova carta, o jogador irá movê-la para a posição correta deste grupo e, assim, terá o conjunto ordenado novamente.
+        <br><br>
+        Este método de ordenação possui complexidade de:
+        <br><br>
+        <b>Melhor Caso</b>: <i>O</i>(n)
+        <br>
+        <b>Caso Médio</b>: <i>O</i>(n<sup>2</sup>)
+        <br>
+        <b>Pior Caso</b>: <i>O</i>(n<sup>2</sup>)
+        <br><br>
+      </p>
+      <h4>Códico em C</h4>
+      <br>
+      <pre><code>
+        void InsertionSort(int *vetor, int tamanho) {
+        
+            int i, j;
+            int troca;
+            
+            for (i = 1; i <= tamanho; i++){
+                troca = v[i];
+                j = (i - 1);
+                while (troca < v[j] && j >= 0) {
+                    v[j + 1] = v[j];
+                    j--;
+                }
+                v[j + 1] = troca;
+            }
+            
+        }
+      </code></pre>
+      <br>
+      <h4>Insertion Sort em Execução</h4>
+      <br>
+      <div class="clearfix">
+        <button class="btn btn-primary" onclick="gerarVetor()">Gerar Vetor</button>
+        <button class="btn btn-primary" onclick="insertionSort()">Ordenar</button>
+        <button class="btn btn-danger float-right" onclick="limparVetor()">Limpar</button>
+      </div>
+      <br>
+      <ul class="list-group list-group-horizontal-xl">
+        <li class="list-group-item flex-fill" align="center" id="v0">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v1">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v2">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v3">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v4">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v5">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v6">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v7">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v8">-</li>
+        <li class="list-group-item flex-fill" align="center" id="v9">-</li>
+      </ul>
+      <br>
+      <br>
+      
+    </div>
+    
+    <script type="text/javascript" src="js/ordenacoes.js"></script>
+    <!--
+    <div class="container fixed-bottom bg-light">
+      <p>teste</p>
+    </div>
+    -->
+  </body>
+</html>
